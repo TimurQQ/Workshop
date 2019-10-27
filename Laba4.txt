@@ -1,0 +1,59 @@
+program Project4;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+Type matrix = array of array of integer;
+var res:matrix;
+procedure Trans(arr:matrix);
+var i,j,n,m:integer;
+begin
+  n := Length(arr[0]);
+  m := Length(arr);
+  SetLength(res,n,m);
+  for i := 0 to n-1 do
+    for j := 0 to m-1 do
+      res[i,j]:=arr[j,i];
+end;
+procedure write1488(arr:matrix);
+var i,j,n,m:integer;
+begin
+  n := Length(arr);
+  m := Length(arr[0]);
+  for i := 0 to n-1 do
+    begin
+      for j := 0 to m-1 do
+        begin
+          write(arr[i,j]);
+          write(' ');
+        end;
+      writeln('');
+    end;
+    writeln('');
+end;
+var n,m,i,j,ext:integer;
+a:matrix;
+begin
+  write('Введите кол-во строк в вашей матрице: ');
+  read(n);
+  write('Введите кол-во столбцов в вашей матрице: ');
+  read(m);
+  writeln('Введите элементы матрицы построчно, разделяя их пробелами');
+  writeln('A:');
+  SetLength(a,n,m);
+  for i := 0 to n-1 do
+    for j := 0 to m-1 do
+        read(a[i,j]);
+  writeln('');
+  Trans(a);
+  writeln('T(A):');
+  write1488(res);
+  Trans(res);
+  writeln('T(T(A)):');
+  write1488(res);
+readln(ext);
+end.
