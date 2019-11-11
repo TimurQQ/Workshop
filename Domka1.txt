@@ -1,0 +1,61 @@
+program Domka1;
+{$APPTYPE CONSOLE}
+{$R *.res}
+uses
+  System.SysUtils;
+function Reverse(s:WideString):WideString;
+var i:integer;
+    tmp:WideChar;
+  begin
+    for i := 1 to Length(s) div 2 do
+      begin
+        tmp:=s[i];
+        s[i]:=s[Length(s)-i+1];
+        s[Length(s)-i+1]:=tmp;
+      end;
+    Result:= s;
+  end;
+function fread(var text:array of WideString;var F:TextFile):integer;
+  var i,cnt:integer;
+    tmp,str:WideString;
+  begin
+    tmp:='';
+    Reset(F);
+    while (not EOF(F)) do
+    begin
+      Readln(F, str);
+      str:=UTF8ToString(str);
+      i:=1;
+      cnt:=0;
+      while i<Length(str) do
+        begin
+          while ((i<Length(str)) and ((str[i]='\t') or (str[i]=' '))) do
+            i:=i+1;
+          while ((i<Length(str)) and (str[i]<>'\t') and (str[i]<>' ')) do
+          begin
+            tmp:=tmp+str[i];
+            i:=i+1;
+          end;
+          text[cnt]:=tmp;
+          cnt:=cnt+1;
+          tmp:='';
+        end;
+    end;
+    Result:=cnt;
+  end;
+
+var i,cnt,token:integer;
+    F:TextFile;
+    text:array [1..200] of WideString;
+begin
+  AssignFile(F, 'Text.txt');
+  cnt:=fread(text,F);
+  for i := 1 to cnt do
+    begin
+      if Reverse(text[i])=text[i] then
+        begin
+          Writeln(text[i]);
+        end;
+    end;
+  Readln(token);
+end.

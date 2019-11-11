@@ -1,0 +1,66 @@
+program Laba4_25;
+{$APPTYPE CONSOLE}
+{$R *.res}
+uses
+  System.SysUtils;
+function fread(var text:array of WideString;var F:TextFile):integer;
+  var i,cnt:integer;
+    tmp,str:String;
+  begin
+    tmp:='';
+    Reset(F);
+    while (not EOF(F)) do
+    begin
+      Readln(F, str);
+      str:=UTF8ToString(str);
+      i:=1;
+      cnt:=0;
+      while i<Length(str) do
+        begin
+          while ((i<Length(str)) and ((str[i]='\t') or (str[i]=' '))) do
+            i:=i+1;
+          while ((i<Length(str)) and (str[i]<>'\t') and (str[i]<>' ')) do
+          begin
+            tmp:=tmp+str[i];
+            i:=i+1;
+          end;
+          Text[cnt]:=tmp;
+          cnt:=cnt+1;
+          tmp:='';
+        end;
+    end;
+    Result:=cnt;
+  end;
+var F1,F2:TextFile;
+    str,tmp:WideString;
+    Text1,Text2: array [1..200] of WideString;
+    res:array [1..200] of integer;
+    token,i,j,cnt1,cnt2:integer;
+begin
+  for i := 1 to Length(res) do
+    begin
+      res[i]:=0;
+    end;
+  AssignFile(F1, 'Text1.txt');
+  AssignFile(F2,'Text2.txt');
+  cnt1:=fread(Text1,F1);
+  cnt2:=fread(Text2,F2);
+  for i := 1 to cnt1 do
+    for j := 1 to cnt2 do
+      if Text2[j]=Text1[i] then
+        res[i]:=res[i]+1;
+  for i := 1 to cnt1 do
+    begin
+      Write(Text1[i]);
+      Write(' : ');
+      Writeln(res[i]);
+    end;
+  Writeln;
+  for i := 1 to cnt2 do
+    begin
+      Write(Text2[i]);
+      Write(' ');
+    end;
+  Writeln;
+  Read(token);
+end.

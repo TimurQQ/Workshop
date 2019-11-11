@@ -1,0 +1,38 @@
+program Domka2;
+{$APPTYPE CONSOLE}
+{$R *.res}
+uses
+  System.SysUtils;
+var
+  n,m,num:integer;
+  matrix:array [1..500,1..500] of integer;
+function GetMin(var matrix:array of integer):integer;
+var i,j,maximum: Integer;
+  begin
+  maximum:=-1;
+    for i := 0 to n-1 do
+      begin
+        for j := 0 to m-1 do
+          begin
+            if matrix[i,j]>maximum then
+              begin
+                maximum := matrix[i,j];
+                Result:=m*i+j;
+              end;
+          end;
+      end;
+  end;
+begin
+  Readln(n);
+  Readln(m);
+  while n<>m do
+    begin
+      Writeln('Введите заново');
+      Readln(n);
+      Readln(m);
+    end;
+  while(n<>2) do
+    begin
+      num:=GetMin(matrix);
+    end;
+end.
