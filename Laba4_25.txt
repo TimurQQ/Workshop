@@ -1,66 +1,197 @@
 program Laba4_25;
 {$APPTYPE CONSOLE}
 {$R *.res}
-uses
-  System.SysUtils;
-function fread(var text:array of WideString;var F:TextFile):integer;
-  var i,cnt:integer;
-    tmp,str:String;
+uses System.SysUtils;
+Type WideText = array [1..2000] of WideString;
+     IntArr = array [1..2000] of integer;
+procedure fwrite(var F:TextFile);
+var tmp:WideString;
+  begin
+    tmp:='';
+    Rewrite(F);
+    while (true) do
+      begin
+        Readln(tmp);
+        if tmp='' then break
+        else Writeln(F,tmp);
+      end;
+  end;
+procedure GetFile(var F:TextFile;num:integer);
+var str:WideString;
+  begin
+    while(true) do
+      begin
+        Write(#10,'Введите имя '+ IntToStr(num) +'-го файла с расширением: ');
+        Readln(str);
+        str:=trim(str);
+        if FileExists(str) then
+          begin
+            AssignFile(F, str);
+            break;
+          end
+        else Writeln('Такого файла не существует в директории!');
+      end;
+  end;
+procedure Sort(var Text1:WideText;cnt:integer);
+var i,j,minx:integer;
+    tmp:WideString;
+  begin
+    for i := 1 to cnt-1 do
+      begin
+        minx:=i;
+        for j := i+1 to cnt do
+          begin
+            if Text1[j]<Text1[minx] then
+              begin
+                minx:=j;
+              end;
+          end;
+        tmp:=Text1[i];
+        Text1[i]:=Text1[minx];
+        Text1[minx]:=tmp;
+      end;
+  end;
+procedure CreateFile(var F:Textfile);
+var str:WideString;
+  begin
+    Write('Напишите название файла c расширением:');
+    Readln(str);
+    AssignFile(F,str);
+    Writeln('Скопируйте текст в консоль или напишите его самостоятельно:');
+    fwrite(F);
+    CloseFile(F);
+  end;
+procedure PrintMatchCnt(var Text1,Text2:WideText;cnt1,cnt2:integer;var res:IntArr);
+var i,j:integer;
+  begin
+      for i := 1 to cnt1 do
+        for j := 1 to cnt2 do
+          if Text1[i]=Text2[j] then
+            res[i]:=res[i]+1;
+      for i := 1 to cnt1 do
+        begin
+          Write(Text1[i]);
+          Write(' : ');
+          Writeln(res[i]);
+        end;
+  end;
+procedure PrintText(var Text1:WideText;cnt1,num:integer);
+var i:integer;
+  begin
+    Writeln(#10,IntToStr(num)+'-й текст: ');
+    for i := 1 to cnt1 do
+      Write(Text1[i]+' ');
+    Writeln;
+  end;
+function ReadKey(var key:integer):boolean;
+  begin
+    Result:=true;
+    try
+      Readln(key);
+    except
+      Writeln('Такого варианта не существует!');
+      Result:=false;
+    end;
+  end;
+function fread(var Text1:WideText;var F:TextFile):integer;
+  var i,cnt,len:integer;
+    tmp,str:WideString;
   begin
     tmp:='';
     Reset(F);
-    while (not EOF(F)) do
+    cnt:=0;
+    while (not eof(F)) do
     begin
       Readln(F, str);
-      str:=UTF8ToString(str);
       i:=1;
-      cnt:=0;
-      while i<Length(str) do
+      len:=Length(str);
+      while i<=len do
         begin
-          while ((i<Length(str)) and ((str[i]='\t') or (str[i]=' '))) do
+          while ((i<=len) and (str[i]=' ')) do
             i:=i+1;
-          while ((i<Length(str)) and (str[i]<>'\t') and (str[i]<>' ')) do
-          begin
-            tmp:=tmp+str[i];
-            i:=i+1;
-          end;
-          Text[cnt]:=tmp;
+          while ((i<=len) and (str[i]<>' ')) do
+            begin
+              tmp:=tmp+str[i];
+              i:=i+1;
+            end;
           cnt:=cnt+1;
+          Text1[cnt]:=tmp;
           tmp:='';
         end;
     end;
     Result:=cnt;
   end;
 var F1,F2:TextFile;
-    str,tmp:WideString;
-    Text1,Text2: array [1..200] of WideString;
-    res:array [1..200] of integer;
-    token,i,j,cnt1,cnt2:integer;
+    Text1,Text2,SText: WideText;
+    res:IntArr;
+    cnt1,cnt2,key:integer;
 begin
-  for i := 1 to Length(res) do
+  Writeln('Данная программа ищет повторения слов из одного файла в другом.');
+  Writeln('Также она помогает вывести слова из файлов'
+  +', упорядоченные по алфавиту, на экран.');
+  while(true) do
     begin
-      res[i]:=0;
+      Writeln('Выберите пункт меню (1 или 2 или 3):');
+      Writeln('1.Создать файл');
+      Writeln('2.Использовать ранее созданные файлы');
+      Writeln('3.Выйти');
+      if ReadKey(key)=false then
+        continue;
+      case key of
+      1:CreateFile(F1);
+      2:
+        begin
+          GetFile(F1,1);
+          GetFile(F2,2);
+          cnt1:=fread(Text1,F1);
+          cnt2:=fread(Text2,F2);
+          while(true) do
+            begin
+              Writeln(#10,'Выберите пункт меню (1 или 2 или 3):');
+              Writeln('1.Показать сколько раз каждое слово из 1-го текста, повторяется во 2-ом.');
+              Writeln('2.Показать сколько раз каждое слово из 2-го текста, повторяется в 1-ом.');
+              Writeln('3.Вернуться назад');
+              if ReadKey(key)=false then
+                continue;
+              case key of
+                1:PrintMatchCnt(Text1,Text2,cnt1,cnt2,res);
+                2:PrintMatchCnt(Text2,Text1,cnt2,cnt1,res);
+                3:break;
+                else Writeln('Такого варианта не существует!');
+              end;
+              while(true) do
+                begin
+                  Writeln(#10,'Выберите пункт меню (1 или 2 или 3 или 4):');
+                  Writeln('1.Вывести исходное содержимое файлов');
+                  Writeln('2.Вывести последовательности слов в файлах, отсортированные по алфавиту');
+                  Writeln('3.Вернуться назад');
+                  Writeln('4.Выйти');
+                  if ReadKey(key)=false then
+                    continue;
+                  case key of
+                    1:
+                      begin
+                        PrintText(Text1,cnt1,1);
+                        PrintText(Text2,cnt2,2);
+                      end;
+                    2:
+                      begin
+                        SText:=Text1;
+                        Sort(SText,cnt1);
+                        PrintText(SText,cnt1,1);
+                        SText:=Text2;
+                        Sort(SText,cnt2);
+                        PrintText(SText,cnt2,2);
+                      end;
+                    3:break;
+                    4:exit;
+                    else Writeln('Такого варианта не существует!');
+                  end;
+                end;
+            end;
+        end;
+      3: exit;
+      else Writeln('Такого варианта не существует!');
+      end;
     end;
-  AssignFile(F1, 'Text1.txt');
-  AssignFile(F2,'Text2.txt');
-  cnt1:=fread(Text1,F1);
-  cnt2:=fread(Text2,F2);
-  for i := 1 to cnt1 do
-    for j := 1 to cnt2 do
-      if Text2[j]=Text1[i] then
-        res[i]:=res[i]+1;
-  for i := 1 to cnt1 do
-    begin
-      Write(Text1[i]);
-      Write(' : ');
-      Writeln(res[i]);
-    end;
-  Writeln;
-  for i := 1 to cnt2 do
-    begin
-      Write(Text2[i]);
-      Write(' ');
-    end;
-  Writeln;
-  Read(token);
 end.

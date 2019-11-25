@@ -1,0 +1,136 @@
+program Laba5_11;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+type Elem = record
+      Value : integer;
+      Number : integer;
+   end;
+type
+  Plist=^List;
+  List=record
+      item:Elem;
+      next:PList;
+      pre:PList;
+   end;
+  WideText = array [1..2000] of WideString;
+var Pl:PList;
+    Tokens:WideText;
+procedure Swap(var P1,P2:PList);
+var tmp:integer;
+  begin
+    tmp:=P1.item.Value;
+    P1.item.Value:=P2.item.Value;
+    P2.item.Value:=tmp;
+    tmp:=P1.item.Number;
+    P1.item.Number:=P2.item.Number;
+    P2.item.Number:=tmp;
+  end;
+function Split(var s:WideString;var Words:WideText):integer;
+var i,len,cnt:integer;
+    word:WideString;
+  begin
+    word:='';
+    i:=1;
+    cnt:=0;
+    len:=Length(s);
+    while i<=len do
+      begin
+        while ((i<=len) and ((s[i]=' ') or (s[i]=#9))) do
+          i:=i+1;
+        while ((i<=len) and (s[i]<>' ') and (s[i]<>#9)) do
+          begin
+            word:=word+s[i];
+            i:=i+1;
+          end;
+        cnt:=cnt+1;
+        Words[cnt]:= word;
+        word:='';
+      end;
+    Result:=cnt;
+  end;
+procedure Bubble_Sort(var Pl:PList);
+var ptr1,ptr2:PList;
+  begin
+    ptr1:=Pl;
+    ptr2:=Pl;
+    while(ptr1 <> nil) do
+      begin
+        ptr2:=Pl;
+        while(ptr2^.next <> nil) do
+          begin
+            if (ptr2^.item.Number > (ptr2^.next)^.item.Number) then
+              Swap(ptr2,ptr2^.next);
+            ptr2:=ptr2^.next;
+          end;
+        ptr1:=ptr1^.next;
+      end;
+  end;
+procedure Print_List(var Pl:PList);
+var ptr:PList;
+  begin
+    ptr:=Pl;
+    while(ptr <> nil)do
+      begin
+      Write(' (');
+      Write(ptr^.item.Value);
+      Write(',');
+      Write(ptr^.item.Number);
+      Write(') ');
+      ptr:=ptr^.next;
+      end;
+  end;
+function Get_List(k:integer):PList;
+var Lp,Ls:PList;
+    i:integer;
+    str:WideString;
+  begin
+    i:=1;
+    while i<=k do
+      begin
+        Write(#10,IntToStr(i)+ '-й элемент: ');
+        Readln(str);
+        Split(str,Tokens);
+        if Pl=nil then
+          begin
+            new(Lp);
+            Lp^.item.Value:=StrToInt(Tokens[1]);
+            Lp^.item.Number:=StrToInt(Tokens[2]);
+            Lp^.next:=nil;
+            Lp^.pre:=nil;
+            Pl:=Lp;
+          end
+        else
+          begin
+            new(Ls);
+            Lp^.next:=Ls;
+            Ls^.item.Value:=StrToInt(Tokens[1]);
+            Ls^.item.Number:=StrToInt(Tokens[2]);
+            Ls^.next:=nil;
+            Ls^.pre:=Lp;
+            Lp:=Ls;
+          end;
+          i:=i+1;
+      end;
+    Result:=Pl;
+  end;
+var  n:integer;
+begin
+  Write('Введите кол-во элементов списка: ');
+  Readln(n);
+  Writeln('Введите список построчно.');
+  Write('В каждой строке укажите ЗНАЧЕНИЕ и НОМЕР ЗНАЧЕНИЯ через пробел.');
+  Pl:=Get_List(n);
+  Writeln('Список успешно создан.');
+  Writeln(#10,'Изначальный список: ',#10);
+  Print_List(Pl);
+  Writeln;
+  Bubble_Sort(Pl);
+  Writeln(#10,'Отсортированный список: ',#10);
+  Print_List(Pl);
+  Readln;
+end.
