@@ -8,29 +8,29 @@ type Plist=^List;
       next:PList;
       pre:PList;
    end;
-function Get_List(k:integer;Pl:PList):PList;
+function Get_List(var F:ElemFile;Pl:PList):PList;
 procedure Bubble_Sort(var Pl:PList);
 procedure Print_List(var Pl:PList);
+procedure CopyList(var P1,P2:Plist);// P1 to P2;
+procedure DisposeAll(var Pl:PList);
 
 implementation
   uses System.SysUtils,Functions;
 
-function Get_List(k:integer;Pl:PList):PList;
+function Get_List(var F:ElemFile;Pl:PList):PList;
 var Lp,Ls:PList;
     i:integer;
-    str:WideString;
+    tmp:Elem;
   begin
     i:=1;
-    while i<=k do
+    while not eof(F) do
       begin
-        Write(#10,IntToStr(i)+ '-й элемент: ');
-        Readln(str);
-        Split(str,Tokens);
+        Read(F,tmp);
         if Pl=nil then
           begin
             new(Lp);
-            Lp^.item.Value:=StrToInt(Tokens[1]);
-            Lp^.item.Number:=StrToInt(Tokens[2]);
+            Lp^.item.Value:=tmp.Value;
+            Lp^.item.Number:=tmp.Number;
             Lp^.next:=nil;
             Lp^.pre:=nil;
             Pl:=Lp;
@@ -39,8 +39,8 @@ var Lp,Ls:PList;
           begin
             new(Ls);
             Lp^.next:=Ls;
-            Ls^.item.Value:=StrToInt(Tokens[1]);
-            Ls^.item.Number:=StrToInt(Tokens[2]);
+            Ls^.item.Value:=tmp.Value;
+            Ls^.item.Number:=tmp.Number;
             Ls^.next:=nil;
             Ls^.pre:=Lp;
             Lp:=Ls;
@@ -49,6 +49,45 @@ var Lp,Ls:PList;
       end;
     Result:=Pl;
   end;
+
+procedure DisposeAll(var Pl:PList);
+  begin
+    while Pl^.next <> nil do
+      begin
+        Pl:=Pl^.next;
+        Pl^.pre:=nil;
+      end;
+    pl:=nil;
+  end;
+
+procedure CopyList(var P1,P2:Plist);// P1 to P2;
+var ptr,Lp,Ls:PList;
+  begin
+    ptr:=P1;
+    P2:=nil;
+    while(ptr <> nil) do
+      begin
+        if P2=nil then
+          begin
+            new(Lp);
+            Lp^.item:=ptr^.item;
+            Lp^.next:=nil;
+            Lp^.pre:=nil;
+            P2:=Lp;
+          end
+        else
+          begin
+            new(Ls);
+            Lp^.next:=Ls;
+            lS^.item:=ptr^.item;
+            Ls^.next:=nil;
+            Ls^.pre:=Lp;
+            Lp:=Ls;
+          end;
+        ptr:=ptr^.next;
+      end;
+  end;
+
 procedure Swap(var P1,P2:PList);
 var tmp:Elem;
   begin
@@ -86,5 +125,6 @@ var ptr:PList;
       Write(') ');
       ptr:=ptr^.next;
       end;
+    Writeln;
   end;
 end.
