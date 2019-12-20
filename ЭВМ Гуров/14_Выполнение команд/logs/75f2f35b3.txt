@@ -1,0 +1,191 @@
+program started
+WatchingPractice
+3678
+Start Without maker
+3701
+Checking result
+4701
+Checking result
+4716
+Checking result
+4719
+Take answer, make is
+4739
+0
+//question was:
+0
+Take answer, make is
+5207
+0
+//question was:
+1
+Take answer, make is
+5504
+0
+//question was:
+1
+WatchingTheory
+7534
+WatchingPractice
+7712
+Take answer, make is
+8325
+0
+//question was:
+0
+WatchingTheory
+9188
+WatchingPractice
+9793
+WatchingTheory
+9836
+WatchingPractice
+9894
+WatchingTheory
+9982
+WatchingPractice
+10037
+WatchingTheory
+10129
+WatchingPractice
+10431
+Take answer, make is
+10740
+0
+//question was:
+1
+WatchingTheory
+11526
+WatchingPractice
+11561
+WatchingTheory
+11601
+WatchingPractice
+11623
+Take answer, make is
+11887
+0
+//question was:
+1
+WatchingTheory
+13409
+WatchingPractice
+13538
+WatchingTheory
+13751
+WatchingPractice
+13801
+WatchingTheory
+13812
+WatchingPractice
+13822
+Take answer, make is
+14004
+0
+//question was:
+0
+WatchingTheory
+14217
+WatchingPractice
+14234
+WatchingTheory
+14265
+WatchingPractice
+14272
+WatchingTheory
+14280
+WatchingPractice
+14408
+WatchingTheory
+14457
+WatchingPractice
+14479
+WatchingTheory
+15681
+WatchingPractice
+15715
+WatchingTheory
+15735
+WatchingPractice
+15751
+WatchingTheory
+15762
+WatchingPractice
+15832
+WatchingTheory
+16208
+WatchingPractice
+16220
+Take answer, make is
+16404
+0
+//question was:
+1
+WatchingTheory
+16613
+WatchingPractice
+16676
+WatchingTheory
+16725
+WatchingPractice
+16861
+Take answer, make is
+17760
+0
+//question was:
+0
+Take answer, make is
+22278
+0
+//question was:
+1
+WatchingTheory
+22834
+WatchingPractice
+23048
+Take answer, make is
+26639
+0
+//question was:
+0
+Take answer, make is
+27500
+0
+//question was:
+1
+Take answer, make is
+28388
+0
+//question was:
+0
+Take answer, make is
+28970
+1
+//question was:
+1
+Take answer, make is
+30084
+1
+//question was:
+2
+Take answer, make is
+30976
+1
+//question was:
+1
+Take answer, make is
+32463
+2
+//question was:
+0
+Take answer, make is
+34745
+3
+//question was:
+1
+Program stoped without maker
+35861
+Time in theory/teaching/answer mode:
+5841
+30020
+0

@@ -1,0 +1,83 @@
+program started
+WatchingPractice
+11
+Start Without maker
+45
+Start Without maker
+1044
+Checking result
+1450
+WatchingTheory
+1808
+WatchingPractice
+1813
+Checking result
+2911
+Take answer, make is
+3028
+0
+//question was:
+1
+WatchingTheory
+3342
+WatchingPractice
+3474
+WatchingTheory
+3955
+WatchingPractice
+4130
+WatchingTheory
+4279
+WatchingPractice
+4449
+WatchingTheory
+4602
+WatchingPractice
+4633
+WatchingTheory
+4720
+WatchingPractice
+4995
+WatchingTheory
+5323
+WatchingPractice
+5359
+WatchingTheory
+5493
+WatchingPractice
+5509
+WatchingTheory
+6650
+WatchingPractice
+6662
+WatchingTheory
+6680
+WatchingPractice
+6763
+WatchingTheory
+6803
+WatchingPractice
+6877
+WatchingTheory
+7777
+WatchingPractice
+7907
+WatchingTheory
+8057
+WatchingPractice
+8071
+WatchingTheory
+8160
+WatchingPractice
+8490
+Take answer, make is
+9035
+0
+//question was:
+2
+Program stoped without maker
+11433
+Time in theory/teaching/answer mode:
+1494
+9939
+0

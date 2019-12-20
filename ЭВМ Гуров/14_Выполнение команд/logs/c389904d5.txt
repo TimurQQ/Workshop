@@ -1,0 +1,17 @@
+program started
+WatchingPractice
+8
+Start Without maker
+43
+WatchingTheory
+1516
+WatchingPractice
+1544
+Checking result
+1562
+Program stoped without maker
+1611
+Time in theory/teaching/answer mode:
+36
+1575
+0

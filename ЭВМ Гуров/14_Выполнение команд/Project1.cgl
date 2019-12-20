@@ -1,0 +1,63 @@
+Functions called:
+ delete (35 times)
+ fclose (1 times)
+ fwrite (29 times)
+ fopen (1 times)
+ strcpy (1 times)
+ vsnprintf (2528 times)
+ time (1 times)
+ SysReallocMem (39 times)
+ SysFreeMem (6980 times)
+ SysGetMem (6981 times)
+ lstrlenA (1 times)
+ lstrcpynA (3 times)
+ realloc (1 times)
+ memcpy (39 times)
+ delete[] (2 times)
+ free (29 times)
+ new[] (14 times)
+ new (40 times)
+ calloc (5 times)
+ malloc (23 times)
+Resource types used:
+ file stream (1 allocs, 1 max)
+ file handle (1 allocs, 1 max)
+ object array (14 allocs, 13 max)
+ object (40 allocs, 28 max)
+ memory block (7010 allocs, 1152 max)
+Modules used:
+ 00400000 05/06/2007 13:01:34 C:\Организация ЭВМ\14_Выполнение
+ команд\Project1.exe
+ 0CD00000 02/01/2002 16:00:00 C:\Организация ЭВМ\14_Выполнение
+ команд\CG32.DLL
+ 32600000 09/10/2003 22:00:00 C:\Организация ЭВМ\14_Выполнение
+ команд\CC3260MT.DLL
+ 41000000 01/19/2006 10:42:26 C:\Организация ЭВМ\14_Выполнение
+ команд\BORLNDMM.DLL
+ 6C740000 04/24/2015 20:57:00
+ C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82
+.7601.18837_none_ec86b8d6858ec0bc\COMCTL32.DLL
+ 6DE30000 07/14/2009 04:16:18 C:\Windows\system32\uxtheme.dll
+ 71330000 07/09/2015 20:42:56 C:\Windows\system32\dwmapi.dll
+ 73F20000 04/24/2015 20:54:14
+ C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.
+7601.18837_none_41e855142bd5705d\comctl32.DLL
+ 74C20000 07/14/2009 04:16:18 C:\Windows\system32\VERSION.DLL
+ 756C0000 09/13/2017 17:46:14 C:\Windows\system32\CRYPTBASE.dll
+ 75810000 08/11/2017 09:19:34 C:\Windows\system32\KERNELBASE.dll
+ 75AD0000 04/17/2017 18:12:26 C:\Windows\system32\oleaut32.dll
+ 75B70000 09/13/2017 18:08:52 C:\Windows\system32\advapi32.dll
+ 761B0000 09/13/2017 18:09:08 C:\Windows\system32\RPCRT4.dll
+ 76270000 12/16/2011 10:53:00 C:\Windows\system32\msvcrt.dll
+ 763E0000 11/21/2010 00:29:04 C:\Windows\system32\SHLWAPI.dll
+ 76440000 11/10/2016 19:19:40 C:\Windows\system32\user32.dll
+ 76590000 09/13/2017 18:09:02 C:\Windows\system32\MSCTF.dll
+ 76660000 08/16/2017 18:10:32 C:\Windows\system32\USP10.dll
+ 76700000 09/08/2017 18:09:54 C:\Windows\system32\GDI32.dll
+ 76750000 08/11/2017 09:19:34 C:\Windows\system32\kernel32.dll
+ 76AE0000 08/11/2017 09:19:40 C:\Windows\system32\ole32.dll
+ 77890000 09/13/2017 18:10:48 C:\Windows\SYSTEM32\ntdll.dll
+ 779F0000 11/21/2010 00:29:22 C:\Windows\system32\IMM32.DLL
+ 77A10000 05/25/2015 21:01:40 C:\Windows\SYSTEM32\sechost.dll
+ 77AD0000 10/12/2017 03:37:22 C:\Windows\system32\LPK.dll
+==========================================

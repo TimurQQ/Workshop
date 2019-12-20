@@ -1,0 +1,24 @@
+program started
+WatchingPractice
+6
+Start Without maker
+13
+Start With maker
+140
+Take answer, make is
+568
+1
+//question was:
+0
+Take answer, make is
+1208
+1
+//question was:
+1
+Program stoped with maker, result is:
+1348
+1
+Time in theory/teaching/answer mode:
+6
+134
+1208

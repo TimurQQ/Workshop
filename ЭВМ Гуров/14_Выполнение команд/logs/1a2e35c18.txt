@@ -1,0 +1,169 @@
+program started
+WatchingPractice
+25
+Start Without maker
+54
+WatchingTheory
+119
+WatchingPractice
+385
+WatchingTheory
+487
+WatchingPractice
+665
+WatchingTheory
+1280
+WatchingPractice
+1422
+WatchingTheory
+1463
+WatchingPractice
+1837
+Take answer, make is
+1867
+0
+//question was:
+0
+Take answer, make is
+2395
+0
+//question was:
+1
+Take answer, make is
+2648
+0
+//question was:
+2
+Take answer, make is
+3075
+0
+//question was:
+3
+Take answer, make is
+3952
+0
+//question was:
+4
+WatchingTheory
+4022
+WatchingPractice
+4097
+Take answer, make is
+4228
+0
+//question was:
+0
+Take answer, make is
+4458
+0
+//question was:
+1
+Take answer, make is
+4721
+0
+//question was:
+2
+Take answer, make is
+4760
+0
+//question was:
+3
+WatchingTheory
+4853
+WatchingPractice
+4898
+WatchingTheory
+4950
+WatchingPractice
+4981
+WatchingTheory
+5001
+WatchingPractice
+5019
+Take answer, make is
+5315
+0
+//question was:
+4
+Take answer, make is
+5404
+0
+//question was:
+0
+Take answer, make is
+5436
+0
+//question was:
+1
+Take answer, make is
+5762
+0
+//question was:
+2
+Take answer, make is
+5840
+0
+//question was:
+3
+Take answer, make is
+6120
+0
+//question was:
+4
+Take answer, make is
+6611
+0
+//question was:
+0
+WatchingTheory
+7459
+WatchingPractice
+7749
+Take answer, make is
+7762
+0
+//question was:
+1
+WatchingTheory
+8146
+WatchingPractice
+8333
+Take answer, make is
+8435
+0
+//question was:
+2
+Take answer, make is
+8980
+0
+//question was:
+3
+Take answer, make is
+9212
+0
+//question was:
+0
+WatchingTheory
+9784
+WatchingPractice
+9871
+Take answer, make is
+10264
+0
+//question was:
+1
+WatchingTheory
+10855
+WatchingPractice
+11026
+Take answer, make is
+11063
+0
+//question was:
+2
+Program stoped without maker
+11406
+Time in theory/teaching/answer mode:
+1889
+9517
+0

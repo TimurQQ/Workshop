@@ -1,0 +1,58 @@
+program started
+WatchingPractice
+337
+Start Without maker
+351
+Take answer, make is
+777
+0
+//question was:
+0
+Take answer, make is
+1029
+0
+//question was:
+1
+Take answer, make is
+1716
+0
+//question was:
+2
+Take answer, make is
+2479
+0
+//question was:
+3
+WatchingTheory
+3889
+WatchingPractice
+3934
+Start With maker
+4023
+Take answer, make is
+4598
+1
+//question was:
+0
+Take answer, make is
+4960
+2
+//question was:
+1
+Take answer, make is
+6503
+2
+//question was:
+2
+Take answer, make is
+8301
+2
+//question was:
+3
+Program stoped with maker, result is:
+8893
+2
+Time in theory/teaching/answer mode:
+382
+3641
+4870

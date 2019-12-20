@@ -1,0 +1,9 @@
+program started
+WatchingPractice
+13
+Program stoped without maker
+29
+Time in theory/teaching/answer mode:
+13
+16
+0
