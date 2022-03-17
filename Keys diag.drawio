@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-17T08:46:48.384Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="NS9h4XYzrCtD13oXzezN" version="17.1.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-17T08:48:53.844Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="mf45XU_SeEFUW21gV7v9" version="17.1.3" type="github">
   <diagram id="OyRcTyBlNtmZmaSBtb3-" name="Page-1">
     <mxGraphModel dx="766" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -32,7 +32,7 @@
         <mxCell id="bO-Ev2rAPcP5Glvwb2sy-86" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="z1wBFRxJV2j2c12fdlnA-5">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="bO-Ev2rAPcP5Glvwb2sy-87" value="PK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;" vertex="1" parent="bO-Ev2rAPcP5Glvwb2sy-86">
+        <mxCell id="bO-Ev2rAPcP5Glvwb2sy-87" value="AK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;" vertex="1" parent="bO-Ev2rAPcP5Glvwb2sy-86">
           <mxGeometry width="20" height="40" as="geometry">
             <mxRectangle width="20" height="40" as="alternateBounds" />
           </mxGeometry>
@@ -77,8 +77,21 @@
         <mxCell id="z1wBFRxJV2j2c12fdlnA-8" value="E4/Раздел (рубрика)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="520" y="300" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="z1wBFRxJV2j2c12fdlnA-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="390" y="540" width="119" height="60" as="geometry" />
+        <mxCell id="z1wBFRxJV2j2c12fdlnA-9" value="" style="shape=table;childLayout=tableLayout;fixedRows=1;rounded=0;whiteSpace=wrap;html=1;startSize=0;" parent="1" vertex="1">
+          <mxGeometry x="390" y="540" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bO-Ev2rAPcP5Glvwb2sy-119" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="z1wBFRxJV2j2c12fdlnA-9">
+          <mxGeometry width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bO-Ev2rAPcP5Glvwb2sy-120" value="AK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;" vertex="1" parent="bO-Ev2rAPcP5Glvwb2sy-119">
+          <mxGeometry width="22" height="30" as="geometry">
+            <mxRectangle width="22" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bO-Ev2rAPcP5Glvwb2sy-121" value="id издательства&#xa;в системе" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;" vertex="1" parent="bO-Ev2rAPcP5Glvwb2sy-119">
+          <mxGeometry x="22" width="108" height="30" as="geometry">
+            <mxRectangle width="108" height="30" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="z1wBFRxJV2j2c12fdlnA-10" value="E5/Издательство" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="394" y="520" width="110" height="20" as="geometry" />
