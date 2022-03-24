@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-24T10:29:37.833Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36 Edg/99.0.1150.46" etag="FCnkYM2KRe1VllKheNkP" version="17.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-24T11:24:58.911Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36 Edg/99.0.1150.46" etag="rt8QOUayf5zG3XxNf56N" version="17.2.1" type="github">
   <diagram id="OyRcTyBlNtmZmaSBtb3-" name="Page-1">
     <mxGraphModel dx="920" dy="551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -192,7 +192,7 @@
             <mxRectangle width="22" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="bO-Ev2rAPcP5Glvwb2sy-121" value="Название&#xa;издательства" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;" parent="bO-Ev2rAPcP5Glvwb2sy-119" vertex="1">
+        <mxCell id="bO-Ev2rAPcP5Glvwb2sy-121" value="id издательства" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;" parent="bO-Ev2rAPcP5Glvwb2sy-119" vertex="1">
           <mxGeometry x="22" width="108" height="30" as="geometry">
             <mxRectangle width="108" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -363,7 +363,7 @@
             <mxRectangle width="21" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pqjdnb121rRu-mDI8d-q-62" value="Название&#xa;издательства" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;" parent="Pqjdnb121rRu-mDI8d-q-60" vertex="1">
+        <mxCell id="Pqjdnb121rRu-mDI8d-q-62" value="id издательства" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;" parent="Pqjdnb121rRu-mDI8d-q-60" vertex="1">
           <mxGeometry x="21" width="104" height="30" as="geometry">
             <mxRectangle width="104" height="30" as="alternateBounds" />
           </mxGeometry>
