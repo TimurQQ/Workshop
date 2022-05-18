@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-18T11:03:03.524Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="LMRbyUYbPxznB-1g7GyE" version="18.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-18T17:55:59.007Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="PiPEON7jG9d3LMAeeEZj" version="18.0.7" type="github">
   <diagram id="KE3Y_JJDXEvooJmlkgoM" name="Page-1">
-    <mxGraphModel dx="1397" dy="740" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1505" dy="797" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -152,7 +152,7 @@
         <mxCell id="UL9RxV9l1OQldz9KdJYa-37" value="АЛУ" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
           <mxGeometry x="496" y="659" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="UL9RxV9l1OQldz9KdJYa-39" value="wr(R2)rp := RR" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="UL9RxV9l1OQldz9KdJYa-39" value="wr(R2)rp := RRст" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="496" y="719" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="UL9RxV9l1OQldz9KdJYa-40" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UL9RxV9l1OQldz9KdJYa-37" target="UL9RxV9l1OQldz9KdJYa-39">
@@ -257,9 +257,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="UL9RxV9l1OQldz9KdJYa-65" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="UL9RxV9l1OQldz9KdJYa-39">
+        <mxCell id="UL9RxV9l1OQldz9KdJYa-65" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="UL9RxV9l1OQldz9KdJYa-86">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="521" y="867" as="sourcePoint" />
+            <mxPoint x="556" y="822" as="sourcePoint" />
             <mxPoint x="352" y="897" as="targetPoint" />
             <Array as="points">
               <mxPoint x="556" y="897" />
@@ -325,6 +325,15 @@
         </mxCell>
         <mxCell id="UL9RxV9l1OQldz9KdJYa-85" value="P" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="14" y="926" width="18" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="UL9RxV9l1OQldz9KdJYa-86" value="wr(R2 + 1)rp := RRмл" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="496" y="782" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UL9RxV9l1OQldz9KdJYa-87" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UL9RxV9l1OQldz9KdJYa-39" target="UL9RxV9l1OQldz9KdJYa-86">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="566" y="699" as="sourcePoint" />
+            <mxPoint x="566" y="729" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
