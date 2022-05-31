@@ -1,16 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2022-05-31T07:26:39.351Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="NKWZWaBOitum7CQxIxo_" version="18.1.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-31T07:27:29.896Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="Ka3C3z2ORcsda5XtjoPa" version="18.1.3" type="github">
   <diagram id="ZsQ9wgLhQumiN2ofr7Z0" name="Page-1">
     <mxGraphModel dx="1452" dy="951" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="-YRlemm83X5S1V-Vt4lk-1" value="Lчт,нч(RP):=(Kчт(RP)*Lнч(RP))[ст,мл]" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="-YRlemm83X5S1V-Vt4lk-1" value="Lчт,нч(RP):=(Kчт(RP)*Lнч(RP))" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="94.5" y="-13" width="233" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-YRlemm83X5S1V-Vt4lk-2" value="Mчт(OP):=2^-1*Mнч[ [i(RP)*2](OP) ](OP)&lt;br&gt;i(RP):=i(RP)-1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="95.75" y="266.5" width="236.5" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-YRlemm83X5S1V-Vt4lk-3" value="Lчт,нч(RP):=(Lчт(RP)*Lнч(RP))[ст,мл]" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="-YRlemm83X5S1V-Vt4lk-3" value="Lчт,нч(RP):=(Lчт(RP)*Lнч(RP))" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="107.13" y="193.5" width="209.75" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-YRlemm83X5S1V-Vt4lk-4" value="Mнч(OP):=2^-1*Mчт[ [i(RP)*2](OP) ](OP)&lt;br&gt;i(RP):=i(RP)-1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
